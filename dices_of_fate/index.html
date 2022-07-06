@@ -14,8 +14,14 @@
   text-align: center;
 }
 
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
 #main {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
@@ -35,8 +41,8 @@
     <img src="img/yulew-NaN.png" id="yulew-dice" width="400px" height="400px" class='dice'/>
     <h1 id="yulew-label" class="dice-label">YULEW</h1>
   </div>
-  
-  <button onclick='' />
+  <div class="break"></div>
+  <button onclick='throw_dices(NB_DICES,PICK_BEST)'>Re-Roll</button>
 </div>
 
 <script>
@@ -109,9 +115,10 @@ console.log(outcome)
 //document.getElementById("yulew-dice").src='img/yulew-'+dices[1]+'.png'
 }
 
-NB_DICES=3
+
+NB_DICES=2
 PICK_BEST=2
-throw_dices(NB_DICES=2,2)
+throw_dices(NB_DICES, PICK_BEST)
 
 </script>
 
