@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.dice-and-label {
+  padding: 20px
+}
+.dice{
+  border-style: solid;
+  padding:4px 4px; 
+  box-shadow: 2px 2px 20px #222;
+}
+.dice-label{
+  text-align: center;
+}
+
+#main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>
+<body>
+
+<p id="demo" style="color:white"></p>
+
+<p />
+
+<div id="main" >
+  <div class="dice-and-label">
+    <img src="img/tyr-NaN.png" id="tyr-dice" width="400px" height="400px" class='dice' />
+    <h1 id="tyr-label" class="dice-label">TYR</h1>
+  </div>
+  <div class="dice-and-label">
+    <img src="img/yulew-NaN.png" id="yulew-dice" width="400px" height="400px" class='dice'/>
+    <h1 id="yulew-label" class="dice-label">YULEW</h1>
+  </div>
+  
+  <button onclick='' />
+</div>
+
+<script>
+
+Array.prototype.max = function() {
+  return Math.max.apply(null, this);
+};
+
+Array.prototype.min = function() {
+  return Math.min.apply(null, this);
+};
+
+GOD_NAMES=['tyr','yulew']
+LABELS={
+  tyr: [,'Rete del Wyrd (Fato)','Huggin and Muninn','Vegvisir (Bussola)',
+        'Mjolnir', 'Elmo degli Aegis', 'Bilancia di Tyr'],
+  yulew: [,'Martirio', 'Nutrimento', 'Salute', 
+          'Protezione', 'Anime dannate', 'Mano di Yulew'],
+}
+
+function throw_dices(nbDices=2, pickBest=2){
+
+//document.getElementById("desc").innerHTML = 'Rolling '+nbDices+' dices and keeping best '+pickBest
+
+//roll X random integers
+dices = []
+for (let i = 0; i < nbDices; i++) {
+  dices.push(Math.floor(Math.random() * 6) + 1)
+}
+
+
+for (let i = 0; i < nbDices; i++) {
+  let god=GOD_NAMES[i]
+  document.getElementById(`${god}-dice`).src=`img/${god}-${dices[i]}.png`
+  document.getElementById(`${god}-label`).innerHTML=LABELS[god][dices[i]]
+}
+
+//sort from max to min
+dices.sort()
+dices.reverse()
+
+//keep first 'pickBest' dices
+console.log(dices)
+dices.splice(pickBest)
+console.log(dices)
+
+sum = dices.reduce((pv, cv) => pv + cv, 0);
+max = Math.max(dices[0],dices[1])
+
+//update text
+outcome = 'ERROR'
+if(max<=1.1)
+  outcome = 'CATASTROPHE! (-2 CA)'
+else if(max<=2.2)
+  outcome = 'Bad Luck  (-1 CA)'
+else if(sum<=5)
+  outcome = 'Meh (0 CA)'
+else if(sum<=8)
+  outcome = 'Yeah! (+1 CA)'
+else if(sum<=11)
+  outcome = 'Lucky! (+2 CA)'
+else
+  outcome = 'GODLIKE (+3 CA)'
+
+outcome = `${outcome} --  Picked [${dices.length}] out of [${nbDices}] dices`
+document.getElementById("demo").innerHTML = outcome
+console.log(outcome)
+
+
+//document.getElementById("yulew-dice").src='img/yulew-'+dices[1]+'.png'
+}
+
+NB_DICES=3
+PICK_BEST=2
+throw_dices(NB_DICES=2,2)
+
+</script>
+
+</body>
+</html>
