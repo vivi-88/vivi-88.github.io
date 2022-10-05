@@ -99,7 +99,7 @@ div.item {
   position: absolute;
   top: 0.5rem;
   bottom: 0rem;
-  left: 7.6em;
+  left: 5.6em;
   z-index: 1;
   background: #C5C5C5;
 }
@@ -111,7 +111,7 @@ div.item {
   margin: 0 0 0 0;
   font-size: 1em;
   font-weight: 400;
-  width: 7em; 
+  width: 5em; 
   text-align: right;
 }
 
@@ -134,13 +134,13 @@ div.item {
   font-weight: 400;
   line-height: 1.2em;
   margin: 0;
-  padding: 0 0 0 10em;
+  padding: 0 0 0 8em;
   color: #C5C5C5;
 }
 
 #timeline section.month section ul {
   list-style-type: none;
-  padding: 0 0 0 8.5em;
+  padding: 0 0 0 6.5em;
   margin: -1.35rem 0 1em;
   max-width: 32rem;
   font-size: 1em;
@@ -160,7 +160,7 @@ div.item {
   -ms-border-radius: 50%;
   border-radius: 50%;
   position: absolute;
-  left: 7.25em;
+  left: 5.25em;
   top: 3px;
   z-index: 2;
 }
