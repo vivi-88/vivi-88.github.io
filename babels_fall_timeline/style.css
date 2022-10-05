@@ -108,9 +108,11 @@ div.item {
   position: sticky;
   top: 5rem;
   color: #888;
-  margin: 0 0 0 -.6em;
+  margin: 0 0 0 -5.5em;
   font-size: 1em;
   font-weight: 400;
+  width: 12em; 
+  text-align: right;
 }
 
 #timeline section.month {
@@ -118,7 +120,7 @@ div.item {
 }
 #timeline section.month:first-child section {
   margin-top: -1.3em;
-  padding-bottom: 0px;
+  /*padding-bottom: 0px;*/
 }
 #timeline section.month section {
   position: relative;
