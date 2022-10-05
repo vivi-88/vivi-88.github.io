@@ -99,7 +99,7 @@ div.item {
   position: absolute;
   top: 0.5rem;
   bottom: 0rem;
-  left: 120px;
+  left: 2em;
   z-index: 1;
   background: #C5C5C5;
 }
@@ -111,7 +111,7 @@ div.item {
   margin: 0 0 0 -5.5em;
   font-size: 1em;
   font-weight: 400;
-  width: 12em; 
+  width: 7em; 
   text-align: right;
 }
 
@@ -119,13 +119,13 @@ div.item {
   position: relative;
 }
 #timeline section.month:first-child section {
-  margin-top: -1.3em;
+  margin-top: -2.35em;
   /*padding-bottom: 0px;*/
 }
 #timeline section.month section {
   position: relative;
   padding-bottom: 1.25em;
-  margin-bottom: 2.2em;
+  margin-bottom: 3.2em;
 }
 #timeline section.month section h4 {
   position: absolute;
@@ -134,13 +134,13 @@ div.item {
   font-weight: 400;
   line-height: 1.2em;
   margin: 0;
-  padding: 0 0 0 149px;
+  padding: 0 0 0 3.8em;
   color: #C5C5C5;
 }
 
 #timeline section.month section ul {
   list-style-type: none;
-  padding: 0 0 0 135px;
+  padding: 0 0 0 3em;
   margin: -1.35rem 0 1em;
   max-width: 32rem;
   font-size: 1em;
@@ -160,7 +160,7 @@ div.item {
   -ms-border-radius: 50%;
   border-radius: 50%;
   position: absolute;
-  left: 114px;
+  left: 1.7em;
   top: 3px;
   z-index: 2;
 }
