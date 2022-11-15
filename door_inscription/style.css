@@ -4,3 +4,20 @@ canvas#tilt {
     max-width: 500px;
     // border: 5px solid #ccc;
 }
+
+
+@media only screen and (max-width: 720px) {
+    .col-wrapper {
+        .col2 {
+            width: 100%;
+            display: block;
+            box-sizing: border-box;
+            
+            clear: both;
+            
+            &:nth-child(even) {
+                padding-left: 0;
+            }
+        }
+    }
+}
