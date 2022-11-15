@@ -14,12 +14,13 @@ var text = {
   "il cielo vi caschi sulla testa per nostra mano. A presto.\n"
 };
 
-function update(canvas, text) {
+function update(canvas_id, text) {
 	
+  var canvas = document.getElementById(canvas_id)
   var ctx = canvas.getContext('2d');
   var scale = {
     h: canvas.height/4,
-	v: canvas.width/4
+	v: canvas.width/8
   };
 
   canvas.width = 600;
@@ -48,4 +49,7 @@ function update(canvas, text) {
   ctx.restore();
 }
 
-update(document.getElementById('tilt'), {h: 'I.,L.,V.: Abbiamo rispolverato questo vecchio trucco,', v: 'siamo rifugiati all\'esterno - il richiamo delle armi certo vi'});
+update('tilt1', {h: 'I.,L.,V.: Abbiamo rispolverato questo vecchio trucco,', v: 'siamo rifugiati all\'esterno - il richiamo delle armi certo vi'});
+update('tilt2', {h: 'spero vi torni in mente. Siamo tornati da poco, re Oberon', v: 'condurrà al nostro rifugio. Avanzate attraverso le rovine:'});
+update('tilt3', {h: 'sembra aver perso il senno. Diffidate delle guardie cittadine,', v: 'sono pericolanti, ma danno protezione. E non c\'è rischio che'});
+update('tilt4', {h: 'e non fatevi trovare allo scoperto. La città non è sicura, ci', v: 'il cielo vi caschi sulla testa per nostra mano. A presto.'});
