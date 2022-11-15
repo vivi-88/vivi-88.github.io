@@ -18,8 +18,10 @@ function update(canvas_id, text) {
 	
   var canvas = document.getElementById(canvas_id)
   var ctx = canvas.getContext('2d');
+  
   canvas.width = 500;
   canvas.height = 500;
+  
   var scale = {
     h: canvas.height/15,
 	v: canvas.width/15
