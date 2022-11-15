@@ -17,13 +17,11 @@ var text = {
 function update(canvas_id, text) {
 	
   var canvas = document.getElementById(canvas_id)
-  canvas.width = 500;
-  canvas.height = 500;
   
   var ctx = canvas.getContext('2d');
   var scale = {
-    h: canvas.height/8,
-	v: canvas.width/8
+    h: canvas.height/6,
+	v: canvas.width/6
   };
 
 
