@@ -25,7 +25,6 @@ function update(canvas_id, text) {
 	v: canvas.width/15
   };
 
-
   ctx.font = '18px Apple Chancery';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
