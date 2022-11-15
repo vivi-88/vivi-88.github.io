@@ -19,12 +19,12 @@ function update(canvas_id, text) {
   var canvas = document.getElementById(canvas_id)
   var ctx = canvas.getContext('2d');
   
-  canvas.width = 500;
-  canvas.height = 500;
+  canvas.width = 550;
+  canvas.height = 550;
   
   var scale = {
-    h: canvas.height/15,
-	v: canvas.width/15
+    h: canvas.height/20,
+	v: canvas.width/20
   };
 
   ctx.font = '18px Apple Chancery';
@@ -52,7 +52,7 @@ function update(canvas_id, text) {
 }
 
 update('tilt1', {h: 'I.,L.,V.: Abbiamo rispolverato questo vecchio',    v: 'siamo rifugiati all\'esterno - il richiamo delle'});
-update('tilt2', {h: 'trucco, spero vi torni in mente. Siamo tornati',   v: 'armi certo vi condurrà al nostro rifugio. Avanzate'});
+update('tilt2', {h: 'trucco, spero vi torni in mente. Siamo tornati',   v: 'armi certo vi condurra\' al nostro rifugio. Avanzate'});
 update('tilt3', {h: 'da poco, re Oberon sembra aver perso il senno.',   v: 'attraverso le rovine: sono pericolanti, ma danno'});
-update('tilt4', {h: 'Diffidate delle guardie cittadine,e non fatevi',   v: 'protezione. E non c\'è rischio che il cielo vi'});
-update('tilt5', {h: 'trovare allo scoperto. La città non è sicura, ci', v: 'caschi sulla testa per nostra mano. A presto.'});
+update('tilt4', {h: 'Diffidate delle guardie cittadine,e non fatevi',   v: 'protezione. E non c\'e\' rischio che il cielo vi'});
+update('tilt5', {h: 'trovare allo scoperto. La citta\' non è sicura, ci', v: 'caschi sulla testa per nostra mano. A presto.'});
