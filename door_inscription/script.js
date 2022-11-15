@@ -17,7 +17,11 @@ var text = {
   'spero vi torni in mente. Siamo tornati da poco, re Oberon\n' + 
   'sembra aver perso il senno. Diffidate delle guardie cittadine,' + 
   'e non fatevi trovare allo scoperto. La città non è sicura, ci',
-  v: 'You look like an idiot right now'
+  v: 
+  "siamo rifugiati all'esterno -- il richiamo delle armi certo vi" + 
+  "condurrà al nostro rifugio. Avanzate attraverso le rovine:" + 
+  "sono pericolanti, ma danno protezione. E non c'è rischio che" + 
+  "il cielo vi caschi sulla testa per nostra mano. A presto."
 };
 
 
