@@ -17,15 +17,17 @@ var text = {
 function update(canvas_id, text) {
 	
   var canvas = document.getElementById(canvas_id)
+  canvas.width = 500;
+  canvas.height = 500;
+  
   var ctx = canvas.getContext('2d');
   var scale = {
-    h: canvas.height/4,
+    h: canvas.height/8,
 	v: canvas.width/8
   };
 
-  canvas.width = 600;
-  canvas.height = 600;
-  ctx.font = '25px Bradley Hand ITC';
+
+  ctx.font = '18px Apple Chancery';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
   
@@ -33,7 +35,7 @@ function update(canvas_id, text) {
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   
   ctx.fillStyle = "#000";
-  ctx.font = '25px Bradley Hand ITC';
+  ctx.font = '25px Apple Chancery';
     
   ctx.save();
   ctx.scale(1, scale.h);
@@ -49,7 +51,8 @@ function update(canvas_id, text) {
   ctx.restore();
 }
 
-update('tilt1', {h: 'I.,L.,V.: Abbiamo rispolverato questo vecchio trucco,', v: 'siamo rifugiati all\'esterno - il richiamo delle armi certo vi'});
-update('tilt2', {h: 'spero vi torni in mente. Siamo tornati da poco, re Oberon', v: 'condurrà al nostro rifugio. Avanzate attraverso le rovine:'});
-update('tilt3', {h: 'sembra aver perso il senno. Diffidate delle guardie cittadine,', v: 'sono pericolanti, ma danno protezione. E non c\'è rischio che'});
-update('tilt4', {h: 'e non fatevi trovare allo scoperto. La città non è sicura, ci', v: 'il cielo vi caschi sulla testa per nostra mano. A presto.'});
+update('tilt1', {h: 'I.,L.,V.: Abbiamo rispolverato questo vecchio',    v: 'siamo rifugiati all\'esterno - il richiamo delle'});
+update('tilt2', {h: 'trucco, spero vi torni in mente. Siamo tornati',   v: 'armi certo vi condurrà al nostro rifugio. Avanzate'});
+update('tilt3', {h: 'da poco, re Oberon sembra aver perso il senno.',   v: 'attraverso le rovine: sono pericolanti, ma danno'});
+update('tilt4', {h: 'Diffidate delle guardie cittadine,e non fatevi',   v: 'protezione. E non c\'è rischio che il cielo vi'});
+update('tilt5', {h: 'trovare allo scoperto. La città non è sicura, ci', v: 'caschi sulla testa per nostra mano. A presto.'});
