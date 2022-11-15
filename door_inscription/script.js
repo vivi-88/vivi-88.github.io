@@ -17,11 +17,12 @@ var text = {
 function update(canvas_id, text) {
 	
   var canvas = document.getElementById(canvas_id)
-  
   var ctx = canvas.getContext('2d');
+  canvas.width = 500;
+  canvas.height = 500;
   var scale = {
-    h: canvas.height/6,
-	v: canvas.width/6
+    h: canvas.height/15,
+	v: canvas.width/15
   };
 
 
@@ -33,7 +34,7 @@ function update(canvas_id, text) {
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   
   ctx.fillStyle = "#000";
-  ctx.font = '25px Apple Chancery';
+  ctx.font = '25px Arial';
     
   ctx.save();
   ctx.scale(1, scale.h);
