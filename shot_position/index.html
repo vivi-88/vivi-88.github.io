@@ -67,10 +67,10 @@
 LABELS=['Gamba DX','Gamba SX','Torso','Braccio DX', 'Braccio SX']
 IMG_NAMES=['rleg','lleg','torso','rarm', 'larm']
 
-START_OFFSET = +3
+START_OFFSET = +4
 
-//shifts at midday (UTC+0)
-DAYS_SINCE_EPOCH = (Math.floor((new Date() - 12 * 60 * 60 * 1000)/(24 * 60 * 60 * 1000)));
+//shifts at 5 (UTC+0)
+DAYS_SINCE_EPOCH = (Math.floor((new Date() - 19 * 60 * 60 * 1000)/(24 * 60 * 60 * 1000)));
 console.log(DAYS_SINCE_EPOCH)
 
 document.querySelectorAll('.icon-and-label > img').forEach((el,idx)=>{
