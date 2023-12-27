@@ -67,6 +67,11 @@
 LABELS=['Gamba DX','Gamba SX','Torso','Braccio DX', 'Braccio SX']
 IMG_NAMES=['rleg','lleg','torso','rarm', 'larm']
 
+if (LABELS.length != IMG_NAMES.length){
+	alert('Critical config error: LABELS and IMG_NAMES length do not match');
+}
+NB_LOCATIONS = LABELS.length
+
 START_OFFSET = +4
 
 //shifts at 5 (UTC+0)
@@ -74,11 +79,11 @@ DAYS_SINCE_EPOCH = (Math.floor((new Date() - 19 * 60 * 60 * 1000)/(24 * 60 * 60 
 console.log(DAYS_SINCE_EPOCH)
 
 document.querySelectorAll('.icon-and-label > img').forEach((el,idx)=>{
-  i = (DAYS_SINCE_EPOCH +idx +START_OFFSET) % 5
+  i = (DAYS_SINCE_EPOCH +idx +START_OFFSET) % NB_LOCATIONS
   el.src = `img/${IMG_NAMES[i]}.png`
 })
 document.querySelectorAll('.icon-and-label > h2').forEach((el,idx)=>{
-  i = (DAYS_SINCE_EPOCH +idx +START_OFFSET) % 5
+  i = (DAYS_SINCE_EPOCH +idx +START_OFFSET) % NB_LOCATIONS
   el.innerHTML = LABELS[i]
 })
 
