@@ -64,15 +64,15 @@
 
 <script>
 
-LABELS=['Gamba DX','Gamba SX','Torso','Braccio DX', 'Braccio SX']
-IMG_NAMES=['rleg','lleg','torso','rarm', 'larm']
+LABELS=['Gamba DX','Gamba SX','Torso DX','Torso SX','Braccio DX', 'Braccio SX']
+IMG_NAMES=['rleg','lleg','rtorso','ltorso','rarm', 'larm']
 
 if (LABELS.length != IMG_NAMES.length){
 	alert('Critical config error: LABELS and IMG_NAMES length do not match');
 }
 NB_LOCATIONS = LABELS.length
 
-START_OFFSET = +4
+START_OFFSET = +0
 
 //shifts at 5 (UTC+0)
 DAYS_SINCE_EPOCH = (Math.floor((new Date() - 19 * 60 * 60 * 1000)/(24 * 60 * 60 * 1000)));
