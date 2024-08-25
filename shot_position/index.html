@@ -91,8 +91,9 @@ const NB_LOCATIONS = LABELS.length;
 
 const START_OFFSET = +2;
 
-//shifts at 5 (UTC+0)
-const DAYS_SINCE_EPOCH = (Math.floor((new Date() - 5 * 60 * 60 * 1000)/(24 * 60 * 60 * 1000)));
+const FIVE_HOURS_AGO_MILLISECONDS = new Date() - 5 * 60 * 60 * 1000;
+// NB: shifts at 5 UTC+0
+const DAYS_SINCE_EPOCH = (Math.floor(FIVE_HOURS_AGO_MILLISECONDS / (24 * 60 * 60 * 1000)));
 console.log(DAYS_SINCE_EPOCH);
 
 function render(){
@@ -105,7 +106,7 @@ function render(){
 	  el.innerHTML = LABELS[i]
 	});
   document.querySelectorAll('.icon-and-label > h3').forEach((el,idx)=>{
-    let date = new Date();
+    let date = new Date(FIVE_HOURS_AGO_MILLISECONDS);
     date.setDate(date.getDate() + CURRENT_DATE_OFFSETS[idx]);
     el.textContent = date.toLocaleDateString("it-IT", TIME_STYLE_OPTS);
   });
