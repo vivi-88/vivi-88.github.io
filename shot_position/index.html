@@ -68,12 +68,12 @@
 <script>
 
 const LABELS=[
-  'Addome SX','Coscia SX','Coscia DX','Gluteo DX','Gluteo SX',
-  'Addome DX','Coscia SX','Coscia DX','Gluteo DX','Gluteo SX'
+  'Addome SX','Coscia SX','Coscia DX','Braccio DX','Braccio SX',
+  'Addome DX','Coscia SX','Coscia DX','Braccio DX','Braccio SX'
 ];
 const IMG_NAMES=[
-  'labs','lleg','rleg','rbutt','lbutt',
-  'rabs','lleg','rleg','rbutt','lbutt'
+  'labs','lleg','rleg','rarm','larm',
+  'rabs','lleg','rleg','rarm','larm'
 ];
 const CURRENT_DATE_OFFSETS=[
   -1,0,+1
@@ -89,7 +89,7 @@ if (LABELS.length != IMG_NAMES.length){
 }
 const NB_LOCATIONS = LABELS.length;
 
-const START_OFFSET = +3;
+const START_OFFSET = +1;
 
 const FIVE_HOURS_AGO_MILLISECONDS = new Date() - 5 * 60 * 60 * 1000;
 // NB: shifts at 5 UTC+0
